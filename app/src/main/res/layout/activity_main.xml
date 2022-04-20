@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+        <variable
+            name="own"
+            type="com.example.a1909aproject.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={own.textTXT}"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="313dp"></EditText>
+
+        <Button
+            android:text="@string/app_main_clicktext"
+            android:onClick="@{(v)->own.onclick(v)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+
+
+</layout>
